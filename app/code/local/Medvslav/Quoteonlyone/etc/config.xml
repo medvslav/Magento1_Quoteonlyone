@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Medvslav_Quoteonlyone extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Medvslav
+ * @package        Medvslav_Quoteonlyone
+ * @copyright      Copyright (c) 2016
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <modules>
+        <Medvslav_Quoteonlyone>
+            <version>1.0.1</version>
+        </Medvslav_Quoteonlyone>
+    </modules>
+    <global>
+        <resources>
+            <medvslav_quoteonlyone_setup>
+                <setup>
+                    <module>Medvslav_Quoteonlyone</module>
+                    <class>Medvslav_Quoteonlyone_Model_Resource_Setup</class>
+                </setup>
+            </medvslav_quoteonlyone_setup>
+        </resources>
+        
+        <models>                   
+            <medvslav_quoteonlyone>
+                <class>Medvslav_Quoteonlyone_Model</class>
+                <resourceModel>medvslav_quoteonlyone_resource</resourceModel>
+            </medvslav_quoteonlyone>
+            <medvslav_quoteonlyone_resource>
+                <class>Medvslav_Quoteonlyone_Model_Resource</class>
+            </medvslav_quoteonlyone_resource>
+        </models>
+        
+        
+        <sales>
+            <quote>
+                <item>
+                    <product_attributes>
+                        <quoteonlyone />
+                    </product_attributes>
+                </item>
+            </quote>
+        </sales>
+
+        
+        <events>
+            <sales_quote_save_before>
+                <observers>
+                    <Medvslav_Quoteonlyone_Model_Observer>
+                        <type>singleton</type>
+                        <class>Medvslav_Quoteonlyone_Model_Observer</class>
+                        <method>checkQuoteonlyone</method>
+                    </Medvslav_Quoteonlyone_Model_Observer>
+                </observers>
+            </sales_quote_save_before>            
+             
+            <sales_quote_product_add_after>
+                <observers>
+                    <Medvslav_Quoteonlyone_Model_Observer>
+                        <type>singleton</type>
+                        <class>Medvslav_Quoteonlyone_Model_Observer</class>
+                        <method>quoteonlyoneToItem</method>
+                    </Medvslav_Quoteonlyone_Model_Observer>
+                </observers>
+            </sales_quote_product_add_after>    
+            
+            <controller_action_predispatch_checkout_onepage_index>
+                <observers>
+                    <Medvslav_Quoteonlyone_Model_Observer>
+                        <type>singleton</type>
+                        <class>Medvslav_Quoteonlyone_Model_Observer</class>
+                        <method>checkQuoteonlyoneCheckout</method>
+                    </Medvslav_Quoteonlyone_Model_Observer>
+                </observers>
+            </controller_action_predispatch_checkout_onepage_index>           
+        </events>
+    </global>       
+</config>

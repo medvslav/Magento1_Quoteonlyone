@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package>
+    <name>Medvslav_Quoteonlyone</name>
+    <version>1.0.1</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/mit-license.php">Massachusetts Institute of Technology License (MITL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>The product can only be one in the shopping cart, if it has the value of the attribute "Only in the cart" equally "true"</summary>
+    <description>Developed module add new attribute &#x201C;Only in the cart&#x201D;, type boolean. &#xD;
+If product has attribute  &#x201C;Only in the cart&#x201D; = true, it means that order can be finished. If and only if cart contains just this product. &#xD;
+If you have in the cart more products, some products have &#x201C;Only in the cart&#x201D; = true and other products have &#x201C;Only in the cart&#x201D; = false warning message in the cart is shown &#x201C;Sorry, chosen product (....) can be purchased alone. Please remove other products&#x201D; and user can NOT finish order  (it means go to checkout page). This error message is taken from new defined static block.&#xD;
+&#xD;
+Installation of the extension needs to be done through Magento Connect in the administrative part of the site.&#xD;
+&#xD;
+When you install this extension in the administrative part of the Magento will be created a new static CMS block - "For the error of module 'Quote only one' " . In this block you can change the error message, which will be shown in the shopping cart. The names of the products from the cart, which attribute "Only in the cart" equally "true" will be placed in the variable "% s"  of the error message.&#xD;
+Also new product attribute "Only in the cart" will be created in the attribute set "General". And the default value of this attribute will be set to "false" for each product. &#xD;
+&#xD;
+&#xD;
+&#xD;
+&#xD;
+</description>
+    <notes>Installation of the extension needs to be done through Magento Connect in the administrative part of the site.&#xD;
+&#xD;
+When you install this extension in the administrative part of the Magento will be created a new static CMS block - "For the error of module 'Quote only one' " . In this block you can change the error message, which will be shown in the shopping cart. The names of the products from the cart, which attribute "Only in the cart" equally "true" will be placed in the variable "% s"  of the error message.&#xD;
+Also new product attribute "Only in the cart" will be created in the attribute set "General". And the default value of this attribute will be set to "false" for each product. &#xD;
+&#xD;
+</notes>
+    <authors><author><name>Yaroslav Medved</name><user>Medvslav</user><email>medvslav@gmail.com</email></author></authors>
+    <date>2016-02-24</date>
+    <time>08:00:12</time>
+    <contents><target name="magelocal"><dir name="Medvslav"><dir name="Quoteonlyone"><dir name="Model"><file name="Observer.php" hash="b140b964ebbf30eded690c0f42f74426"/><dir name="Resource"><file name="Setup.php" hash="b2db21b502b4e7b7120b102be44b0e82"/></dir></dir><dir name="data"><dir name="medvslav_quoteonlyone_setup"><file name="data-install-1.0.0.php" hash="f0744acc9414327ff3892ea3053a8e3e"/></dir></dir><dir name="etc"><file name="config.xml" hash="df5d8912ec7ceda2e33032e564b99542"/></dir><dir name="sql"><dir name="medvslav_quoteonlyone_setup"><file name="install-1.0.0.php" hash="ec56356c2911eac14f43a84a60a3dee2"/><file name="upgrade-1.0.0-1.0.1.php" hash="dc0ffbc3e8edfb1e0fe02a53612da6f7"/></dir></dir></dir><dir name="Senddiscount"><dir name="Block"><dir name="Adminhtml"><dir name="Sdcustomer"><dir name="Edit"><file name="Form.php" hash="11540aeabc44de8782b7fd3a4a87e84b"/><dir name="Tab"><dir name="Field"><file name="Myfield.php" hash="eca6e531229a84dcba5d15cf28e9ec0c"/></dir><file name="Form.php" hash="41da6b8a7d251006edd5158b475dce63"/></dir><file name="Tabs.php" hash="3da005e2b571f4995dee9a9480952f12"/></dir><file name="Edit.php" hash="5de67ea98d3a45ca28660a482c215638"/><file name="Grid.php" hash="234b93dadd314bb722fceece793fef2b"/></dir><file name="Sdcustomer.php" hash="1892945ef4c6bf6de75bcf547fd8bd05"/></dir><dir name="Email"><file name="Price.php" hash="8e6d8224314f1edd978dd013fa35f722"/></dir></dir><dir name="Controller"><dir name="Adminhtml"><file name="Senddiscount.php" hash="9fabc12b7675c3c6b11fe15ae6e9acd6"/></dir></dir><dir name="Helper"><file name="Data.php" hash="8af15c1e6a7c2d88292bcd537b66ed95"/></dir><dir name="Model"><dir name="Adminhtml"><dir name="Search"><file name="Sdcustomer.php" hash="92453e387838a7456e3835ef986535f7"/></dir></dir><file name="Email.php" hash="338e53c74cf599d39ee8303fb5efc4d3"/><file name="Observer.php" hash="c2ec0332b88c75d8f53e47171e4e252e"/><dir name="Resource"><dir name="Sdcustomer"><file name="Collection.php" hash="b60d65c16a7ad163c454b442d5a57d2e"/></dir><file name="Sdcustomer.php" hash="6bff5a882aa7fab8b86e57debd56fcd2"/><file name="Setup.php" hash="4424973033fcd3777e459715f233cdfc"/></dir><dir name="Sdcustomer"><dir name="Attribute"><dir name="Source"><file name="Customerstatus.php" hash="211f7bc8c65e00a58695fa8657fb50ca"/></dir></dir></dir><file name="Sdcustomer.php" hash="ebaa3d460a1a0488c72992f138ac46fe"/></dir><dir name="controllers"><dir name="Adminhtml"><dir name="Senddiscount"><file name="SdcustomerController.php" hash="6312ea7d53121b122a2969e3f1173e6b"/></dir></dir><file name="IndexController.php" hash="4f81a432fe3a80c5247c993410654a1b"/><file name="UnsubscribeController.php" hash="b24e8b39e7b7fccd35a190aef21d7f48"/></dir><dir name="data"><dir name="medvslav_senddiscount_setup"><file name="data-install-1.0.0.php" hash="f5550f69392236b80b73041f2a98ea70"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="9d84b638265b263a64aad918d959d4f9"/><file name="config.xml" hash="52c615ac6716faaa8d5f17c4ded2193d"/></dir><dir name="sql"><dir name="medvslav_senddiscount_setup"><file name="install-1.0.0.php" hash="685741975816955c57fab453ab3c1558"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Medvslav_Quoteonlyone.xml" hash="ac5376bd47cf5369f17cf8cb953b8515"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.3.30</min><max>5.5.9</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.8</min><max>1.9.2</max></package></required></dependencies>
+</package>
