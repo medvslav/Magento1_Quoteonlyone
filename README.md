@@ -8,3 +8,4 @@ If you have in the cart more products, some products have "Only in the cart" = t
 
 When you install this extension in the administrative part of the Magento will be created a new static CMS block - "For the error of module 'Quote only one' " . In this block you can change the error message, which will be shown in the shopping cart. The names of the products from the cart, which attribute "Only in the cart" equally "true" will be placed in the variable "% s"  of the error message.<br />
 Also new product attribute "Only in the cart" will be created in the attribute set "General". And the default value of this attribute will be set to "false" for each product.
+#
